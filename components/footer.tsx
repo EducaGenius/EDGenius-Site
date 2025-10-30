@@ -11,7 +11,7 @@ export function Footer() {
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-EOzz5kuJyAxZDekrEllHsWwg8Eldfz.png"
+                src="/logo-header.svg"
                 alt="EducaGênius EAD"
                 width={40}
                 height={40}
