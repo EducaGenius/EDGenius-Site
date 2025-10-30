@@ -6,6 +6,7 @@ import { Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { useEffect, useState } from "react"
+import SmoothLink  from "../components/SmoothScroll"
 
 export function Header() {
   const [isVisible, setIsVisible] = useState(false)
@@ -40,7 +41,7 @@ export function Header() {
         <div className="flex h-20 items-center justify-between">
           <Link href="/" className="flex items-center">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-grande-Obfk45BaYxN7GlRugDyV7ERFaVps0l.png"
+              src="/logo-header.svg"
               alt="EducaGênius EAD"
               width={50}
               height={50}
@@ -51,13 +52,13 @@ export function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
-              <Link
+              <SmoothLink 
                 key={item.href}
                 href={item.href}
                 className="text-sm font-medium text-white/70 hover:text-[#ffc800] transition-colors"
               >
                 {item.label}
-              </Link>
+              </SmoothLink >
             ))}
             <Button className="bg-gradient-to-r from-[#ff7500] to-[#ffc800] hover:opacity-90 text-white font-semibold">
               Seja Parceiro
