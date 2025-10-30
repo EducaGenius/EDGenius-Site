@@ -1,12 +1,13 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Mona_Sans } from "next/font/google"
+import { Poppins } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
-const monaSans = Mona_Sans({
+const poppins = Poppins({
   subsets: ["latin"],
-  variable: "--font-mona-sans",
+  weight: ["400", "500", "600", "700"], // adicione os pesos que você quer
+  variable: "--font-poppins",
   display: "swap",
 })
 
@@ -25,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${monaSans.className} font-sans antialiased`}>
+      <body className={`${poppins.className} font-sans antialiased`}>
         {children}
         <Analytics />
       </body>
