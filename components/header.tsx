@@ -1,0 +1,95 @@
+"use client"
+
+import Image from "next/image"
+import Link from "next/link"
+import { Menu } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { useEffect, useState } from "react"
+
+export function Header() {
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const heroHeight = window.innerHeight * 0.8
+      setIsVisible(window.scrollY > heroHeight)
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    handleScroll()
+
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  const navItems = [
+    { label: "Início", href: "#inicio" },
+    { label: "Sobre", href: "#sobre" },
+    { label: "Parceria", href: "#parceria" },
+    { label: "Cursos", href: "#cursos" },
+    { label: "Contato", href: "#contato" },
+  ]
+
+  return (
+    <header
+      className={`fixed top-0 z-50 w-full border-b border-white/10 bg-[#000c34]/95 backdrop-blur supports-[backdrop-filter]:bg-[#000c34]/90 transition-transform duration-300 ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
+      <div className="container mx-auto px-4">
+        <div className="flex h-20 items-center justify-between">
+          <Link href="/" className="flex items-center">
+            <Image
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-grande-Obfk45BaYxN7GlRugDyV7ERFaVps0l.png"
+              alt="EducaGênius EAD"
+              width={50}
+              height={50}
+              className="h-12 w-auto"
+            />
+          </Link>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-6">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-sm font-medium text-white/70 hover:text-[#ffc800] transition-colors"
+              >
+                {item.label}
+              </Link>
+            ))}
+            <Button className="bg-gradient-to-r from-[#ff7500] to-[#ffc800] hover:opacity-90 text-white font-semibold">
+              Seja Parceiro
+            </Button>
+          </nav>
+
+          {/* Mobile Navigation */}
+          <Sheet>
+            <SheetTrigger asChild className="md:hidden">
+              <Button variant="ghost" size="icon" className="text-white">
+                <Menu className="h-6 w-6" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[300px] bg-[#000c34] border-white/10">
+              <nav className="flex flex-col space-y-4 mt-8">
+                {navItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="text-lg font-medium text-white/70 hover:text-[#ffc800] transition-colors"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+                <Button className="bg-gradient-to-r from-[#ff7500] to-[#ffc800] hover:opacity-90 text-white font-semibold w-full mt-4">
+                  Seja Parceiro
+                </Button>
+              </nav>
+            </SheetContent>
+          </Sheet>
+        </div>
+      </div>
+    </header>
+  )
+}
