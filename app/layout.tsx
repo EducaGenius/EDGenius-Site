@@ -12,8 +12,10 @@ const monaSans = Mona_Sans({
 
 export const metadata: Metadata = {
   title: "EducaGênius EAD - Educação que gera valor!",
-  description: "Transformar e valorizar vidas e negócios através da educação acessível, inovadora e de qualidade.",
-  generator: "v0.app",
+  description: "Transformando e valorizarando vidas e negócios, através da educação acessível, inovadora e de qualidade.",
+  icons: {
+    icon: "/favicon.svg"
+  },
 }
 
 export default function RootLayout({
