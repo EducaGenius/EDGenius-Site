@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from "lucide-react"
+import SmoothLink  from "../components/SmoothScroll"
 
 export function Footer() {
   return (
@@ -32,24 +33,24 @@ export function Footer() {
             <h3 className="text-sm font-semibold text-white mb-4">Links Rápidos</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="#inicio" className="text-sm text-white/70 hover:text-[#ffc800] transition-colors">
+                <SmoothLink href="#inicio" className="text-sm text-white/70 hover:text-[#ffc800] transition-colors">
                   Início
-                </Link>
+                </SmoothLink>
               </li>
               <li>
-                <Link href="#sobre" className="text-sm text-white/70 hover:text-[#ffc800] transition-colors">
+                <SmoothLink href="#sobre" className="text-sm text-white/70 hover:text-[#ffc800] transition-colors">
                   Sobre Nós
-                </Link>
+                </SmoothLink>
               </li>
               <li>
-                <Link href="#parceria" className="text-sm text-white/70 hover:text-[#ffc800] transition-colors">
+                <SmoothLink href="#beneficios" className="text-sm text-white/70 hover:text-[#ffc800] transition-colors">
                   Seja Parceiro
-                </Link>
+                </SmoothLink>
               </li>
               <li>
-                <Link href="#cursos" className="text-sm text-white/70 hover:text-[#ffc800] transition-colors">
+                <SmoothLink href="#cursos" className="text-sm text-white/70 hover:text-[#ffc800] transition-colors">
                   Cursos
-                </Link>
+                </SmoothLink>
               </li>
             </ul>
           </div>
@@ -64,18 +65,18 @@ export function Footer() {
                   href="mailto:contato@educagenius.com.br"
                   className="text-sm text-white/70 hover:text-[#ffc800] transition-colors"
                 >
-                  contato@educagenius.com.br
+                  contatoeducagenius@gmail.com.br
                 </a>
               </li>
               <li className="flex items-start gap-2">
                 <Phone className="h-4 w-4 text-[#ff7500] mt-0.5 flex-shrink-0" />
-                <a href="tel:+5511999999999" className="text-sm text-white/70 hover:text-[#ffc800] transition-colors">
-                  (11) 99999-9999
+                <a target="_blank" href="https://api.whatsapp.com/send/?phone=5531982973769&text=Ol%C3%A1!+Gostaria+de+saber+mais+sobre+a+parceria" className="text-sm text-white/70 hover:text-[#ffc800] transition-colors">
+                  (31) 98297-3769
                 </a>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 text-[#ff7500] mt-0.5 flex-shrink-0" />
-                <span className="text-sm text-white/70">São Paulo, SP - Brasil</span>
+                <span className="text-sm text-white/70">Ipatinga, MG - Brasil</span>
               </li>
             </ul>
           </div>

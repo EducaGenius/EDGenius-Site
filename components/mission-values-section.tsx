@@ -5,7 +5,7 @@ import { Users, Handshake } from "lucide-react"
 
 export function MissionValuesSection() {
   return (
-    <section className="py-16 lg:py-24 bg-background">
+    <div className="py-16 lg:py-24 bg-background">
       <div className="container mx-auto px-4">
         {/* Title */}
         <div className="text-center mb-12">
@@ -103,6 +103,6 @@ export function MissionValuesSection() {
           </Button>
         </div>
       </div>
-    </section>
+    </div>
   )
 }

@@ -6,6 +6,7 @@ import { PartnershipLevels } from "@/components/partnership-levels"
 import { JourneySection } from "@/components/journey-section"
 import { CoursesSection } from "@/components/courses-section"
 import { EjaSection } from "@/components/eja-section"
+import { FormSection } from "@/components/form-section"
 import { FaqSection } from "@/components/faq-section"
 import { Footer } from "@/components/footer"
 import { FloatingButtons } from "@/components/floating-buttons"
@@ -40,6 +41,9 @@ export default function Home() {
 
         {/* EJA Section - Adult education courses */}
         <EjaSection />
+
+        {/* Form Section - Form */}
+        <FormSection />
 
         {/* FAQ Section - Frequently asked questions */}
         <FaqSection />

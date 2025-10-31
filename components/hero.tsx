@@ -6,7 +6,7 @@ import { Handshake, Info, Shield } from "lucide-react"
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden flex flex-col lg:flex-row items-stretch min-h-[600px] lg:min-h-screen">
+    <div className="relative overflow-hidden flex flex-col lg:flex-row items-stretch min-h-[600px] lg:min-h-screen">
       {/* LADO AZUL / LOGO */}
       <div className="flex w-full lg:w-[30%] bg-[#000c34] items-center justify-center py-12 lg:py-0">
         <div className="relative z-10 px-6 sm:px-8">
@@ -63,6 +63,6 @@ export function Hero() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   )
 }
