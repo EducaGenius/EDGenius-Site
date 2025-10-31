@@ -18,10 +18,6 @@ export function Footer() {
                 height={40}
                 className="h-10 w-auto"
               />
-              <span className="text-lg font-bold text-white">
-                EducaGênius{" "}
-                <span className="bg-gradient-to-r from-[#ff7500] to-[#ffc800] bg-clip-text text-transparent">EAD</span>
-              </span>
             </div>
             <p className="text-sm text-white/70 leading-relaxed">
               Transformando vidas através da educação de qualidade há mais de 20 anos.
