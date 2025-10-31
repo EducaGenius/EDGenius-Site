@@ -58,3 +58,30 @@
     font-family: 'Poppins', system-ui, sans-serif;
   }
 }
+input[type="checkbox"].checkbox-custom {
+  accent-color: #ff7500; /* Laranja EducaGênius */
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ff7500;
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+input[type="checkbox"].checkbox-custom:checked {
+  background-color: #ff7500;
+  border-color: #ff7500;
+}
+
+input[type="checkbox"].checkbox-custom:checked::after {
+  content: "✓";
+  color: #fff; /* branco no check */
+  font-weight: bold;
+  position: absolute;
+  top: -2px;
+  left: 3px;
+  font-size: 13px;
+}
+
