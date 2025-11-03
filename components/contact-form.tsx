@@ -29,10 +29,20 @@ export default function ContactForm(){
         }))
     }
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         console.log("Dados enviados:", formData)
-        // Aqui você pode enviar para API, Google Sheets, webhook etc.
+
+        try{
+            const res = await fetch("/api/send-to-sheets", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData),
+            })
+        }catch(error){
+            console.error("Erro de rede:", error)
+            console.log("Erro na rede. Verifique a conexão")
+        }
     }
 
     return (
