@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card"
 import { Target, BookOpen, Play } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Users, Handshake } from "lucide-react"
+import SmoothLink  from "../components/SmoothScroll"
 
 export function MissionValuesSection() {
   return (
@@ -61,13 +62,6 @@ export function MissionValuesSection() {
                 <Play className="w-10 h-10 text-white ml-1" fill="white" />
               </div>
             </div>
-            <div className="absolute bottom-4 left-4 right-4 flex items-center justify-center">
-              <div className="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg">
-                <span className="bg-gradient-to-r from-[#ff7500] to-[#ffc800] bg-clip-text text-transparent font-bold text-lg">
-                  EducaGênius
-                </span>
-              </div>
-            </div>
           </div>
 
           {/* Stats Cards */}
@@ -89,18 +83,18 @@ export function MissionValuesSection() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
-          <Button size="lg" className="bg-[#000c34] hover:bg-[#000c34]/90 text-white font-semibold px-8">
+          <SmoothLink href="#form" className=" flex items-center bg-[#000c34] hover:bg-[#000c34]/90 rounded-md text-white font-semibold px-8 py-3">
             <Handshake className="mr-2 h-5 w-5" />
             Quero ser parceiro agora!
-          </Button>
-          <Button
+          </SmoothLink>
+          {/*<Button
             size="lg"
             variant="outline"
             className="border-2 border-[#000c34] text-[#000c34] hover:bg-[#000c34] hover:text-white font-semibold px-8 bg-transparent"
           >
             <Users className="mr-2 h-5 w-5" />
             Nossa equipe
-          </Button>
+          </Button>*/}
         </div>
       </div>
     </div>

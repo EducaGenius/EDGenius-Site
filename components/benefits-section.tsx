@@ -1,6 +1,7 @@
 import { TrendingUp, Handshake, Award, Laptop, Headphones, Heart } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import SmoothLink  from "../components/SmoothScroll"
 
 const benefits = [
   {
@@ -97,6 +98,13 @@ export function BenefitsSection() {
               </Card>
             )
           })}
+        </div>
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
+          <SmoothLink href="#form" className=" flex items-center bg-[#000c34] hover:bg-[#000c34]/90 rounded-md text-white font-semibold px-8 py-3">
+            <Handshake className="mr-2 h-5 w-5" />
+            Quero ser parceiro agora!
+          </SmoothLink>
         </div>
       </div>
     </section>

@@ -3,6 +3,7 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Handshake, Info, Shield } from "lucide-react"
+import SmoothLink  from "../components/SmoothScroll"
 
 export function Hero() {
   return (
@@ -38,21 +39,20 @@ export function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 mb-10">
-            <Button
-              size="lg"
-              className="bg-[#000c34] hover:bg-[#000c34]/90 text-white font-semibold px-8 py-6 text-base rounded-full shadow-lg cursor-pointer animate-pulse"
+            <SmoothLink
+              href="#form"
+              className="flex items-center bg-[#000c34] hover:bg-[#000c34]/90 text-white font-semibold px-8 py-3 text-base rounded-full shadow-lg cursor-pointer animate-pulse"
             >
               <Handshake className="mr-2 h-5 w-5" />
               Quero ser parceiro agora!
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-[#ff7500] font-semibold px-8 py-6 text-base bg-transparent rounded-full cursor-pointer"
+            </SmoothLink>
+            <SmoothLink
+              href="#beneficios"
+              className="flex items-center border-2 border-white text-white hover:bg-white hover:text-[#ff7500] font-semibold px-8 py-3 text-base bg-transparent rounded-full cursor-pointer"
             >
               <Info className="mr-2 h-5 w-5" />
               Como funciona?
-            </Button>
+            </SmoothLink>
           </div>
 
           <div className="flex items-center justify-center lg:justify-start gap-2 text-white">

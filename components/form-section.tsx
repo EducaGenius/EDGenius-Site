@@ -6,7 +6,7 @@ import ContactForm from "../components/contact-form"
 
 export function FormSection(){
     return(
-        <section id="" className="bg-[#000c34] text-white py-20 px-4">
+        <section id="form" className="bg-[#000c34] text-white py-20 px-4">
             <div className="max-w-4xl mx-auto text-center">
                 <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">
                 Transforme sua vida <span className="bg-gradient-to-r from-[#ff7500] to-[#ffc800] bg-clip-text text-transparent font-extrabold">financeira hoje!</span>

@@ -1,5 +1,6 @@
-import { GraduationCap, BookOpen, CheckCircle } from "lucide-react"
+import { GraduationCap, BookOpen, CheckCircle, Handshake } from "lucide-react"
 import { Card } from "@/components/ui/card"
+import SmoothLink  from "../components/SmoothScroll"
 
 export function EjaSection() {
   return (
@@ -78,7 +79,13 @@ export function EjaSection() {
             </div>
           </Card>
         </div>
-
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
+          <SmoothLink href="#form" className=" flex items-center bg-[#000c34] hover:bg-[#000c34]/90 rounded-md text-white font-semibold px-8 py-3">
+            <Handshake className="mr-2 h-5 w-5" />
+            Quero ser parceiro agora!
+          </SmoothLink>
+        </div>
         {/* Bottom Note */}
         <div className="mt-12 text-center">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-50 to-pink-50 rounded-full px-6 py-3 border border-[#000c34]/10">
