@@ -60,7 +60,7 @@ export function Header() {
                 {item.label}
               </SmoothLink >
             ))}
-            <SmoothLink href="#form" className="bg-gradient-to-r from-[#ff7500] to-[#ffc800] hover:opacity-90 text-white font-semibold">
+            <SmoothLink href="#form" className="bg-gradient-to-r from-[#ff7500] to-[#ffc800] hover:opacity-90 rounded-3xl py-2 px-5 text-white font-semibold">
               Seja Parceiro
             </SmoothLink>
           </nav>
@@ -83,7 +83,7 @@ export function Header() {
                     {item.label}
                   </Link>
                 ))}
-                <SmoothLink href="#form" className="bg-gradient-to-r from-[#ff7500] to-[#ffc800] hover:opacity-90 text-white font-semibold w-full mt-4">
+                <SmoothLink href="#form" className="bg-gradient-to-r from-[#ff7500] to-[#ffc800] hover:opacity-90 rounded-3xl py-2 px-5 text-white font-semibold w-full mt-4">
                   Seja Parceiro
                 </SmoothLink>
               </nav>
