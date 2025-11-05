@@ -1,5 +1,6 @@
-import { Heart, Briefcase, Wrench, HardHat, Laptop, Leaf, Utensils } from "lucide-react"
+import { Heart, Briefcase, Wrench, HardHat, Laptop, Leaf, Utensils, Handshake } from "lucide-react"
 import { Card } from "@/components/ui/card"
+import SmoothLink  from "../components/SmoothScroll"
 
 const courseCategories = [
   {
@@ -175,6 +176,13 @@ export function CoursesSection() {
               </Card>
             )
           })}
+        </div>
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
+          <SmoothLink href="#form" className=" flex items-center bg-[#000c34] hover:bg-[#000c34]/90 rounded-md text-white font-semibold px-8 py-3">
+            <Handshake className="mr-2 h-5 w-5" />
+            Quero ser parceiro agora!
+          </SmoothLink>
         </div>
       </div>
     </section>

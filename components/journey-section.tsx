@@ -1,7 +1,8 @@
 "use client"
 
-import { UserPlus, Users, Rocket, TrendingUp, Trophy } from "lucide-react"
+import { UserPlus, Users, Rocket, TrendingUp, Trophy, Handshake } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
+import SmoothLink  from "../components/SmoothScroll"
 
 const steps = [
   {
@@ -90,7 +91,7 @@ export function JourneySection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="py-16 lg:py-24 bg-gradient-to-b from-blue-50/30 to-white">
+    <section id="jornada" ref={sectionRef} className="py-16 lg:py-24 bg-gradient-to-b from-blue-50/30 to-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 lg:mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-[#000c34] mb-4">
@@ -205,6 +206,13 @@ export function JourneySection() {
               )
             })}
           </div>
+        </div>
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
+          <SmoothLink href="#form" className=" flex items-center bg-[#000c34] hover:bg-[#000c34]/90 rounded-md text-white font-semibold px-8 py-3">
+            <Handshake className="mr-2 h-5 w-5" />
+            Quero ser parceiro agora!
+          </SmoothLink>
         </div>
       </div>
     </section>

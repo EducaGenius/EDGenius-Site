@@ -3,6 +3,7 @@
 import { Plus, Minus } from "lucide-react"
 import { useState } from "react"
 import { Card } from "@/components/ui/card"
+import SmoothLink  from "../components/SmoothScroll"
 
 const faqs = [
   {
@@ -100,10 +101,10 @@ export function FaqSection() {
 
         <div className="text-center mt-12">
           <p className="text-muted-foreground mb-4">Ainda tem dúvidas?</p>
-          <a href="#contato" className="inline-flex items-center gap-2 text-[#ff7500] font-semibold hover:underline">
+          <SmoothLink href="#form" className="inline-flex items-center gap-2 text-[#ff7500] font-semibold hover:underline">
             Entre em contato conosco
             <span>→</span>
-          </a>
+          </SmoothLink>
         </div>
       </div>
     </section>

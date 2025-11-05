@@ -25,10 +25,10 @@ export function Header() {
 
   const navItems = [
     { label: "Início", href: "#inicio" },
-    { label: "Sobre", href: "#sobre" },
-    { label: "Parceria", href: "#parceria" },
+    { label: "Sobre", href: "#beneficios" },
+    { label: "Parceria", href: "#jornada" },
     { label: "Cursos", href: "#cursos" },
-    { label: "Contato", href: "#contato" },
+    { label: "Contato", href: "#form" },
   ]
 
   return (
