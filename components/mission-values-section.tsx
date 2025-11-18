@@ -54,15 +54,15 @@ export function MissionValuesSection() {
         </div>
 
         {/* Video and Stats */}
-        <div className="grid lg:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
+        <div className="flex justify-center gap-8 items-center max-w-6xl mx-auto">
           {/* Video Player */}
-          <div className="relative aspect-video bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl overflow-hidden shadow-xl group cursor-pointer">
+          {/*<div className="relative aspect-video bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl overflow-hidden shadow-xl group cursor-pointer">
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#ff7500] to-[#ffc800] flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg">
                 <Play className="w-10 h-10 text-white ml-1" fill="white" />
               </div>
             </div>
-          </div>
+          </div>*/}
 
           {/* Stats Cards */}
           <div className="grid grid-cols-3 gap-4">
