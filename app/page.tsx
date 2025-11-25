@@ -1,20 +1,56 @@
-export default function Page() {
+import { Header } from "@/components/header"
+import { Hero } from "@/components/hero"
+import { MissionValuesSection } from "@/components/mission-values-section"
+import { BenefitsSection } from "@/components/benefits-section"
+import { PartnershipLevels } from "@/components/partnership-levels"
+import { JourneySection } from "@/components/journey-section"
+import { CoursesSection } from "@/components/courses-section"
+import { EjaSection } from "@/components/eja-section"
+import { FormSection } from "@/components/form-section"
+import { FaqSection } from "@/components/faq-section"
+import { Footer } from "@/components/footer"
+import { FloatingButtons } from "@/components/floating-buttons"
+
+export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center text-center px-6 bg-gray-50">
-      <h1 className="text-4xl font-bold text-gray-900 mb-4">
-        Estamos trabalhando!
-      </h1>
+    <>
+      <Header />
 
-      <p className="text-lg text-gray-600 max-w-xl">
-        Estamos realizando melhorias importantes para deixar tudo mais rápido,
-        moderno e eficiente. Voltaremos em breve.
-      </p>
+      <main className="min-h-screen">
+        {/* Hero Section - Split design with logo and CTA */}
+        <section id="inicio">
+          <Hero />
+        </section>
 
-      <div className="mt-8 animate-pulse">
-        <div className="h-4 w-40 bg-gray-300 rounded-full mb-3"></div>
-        <div className="h-4 w-32 bg-gray-300 rounded-full mb-3"></div>
-        <div className="h-4 w-48 bg-gray-300 rounded-full"></div>
-      </div>
-    </div>
-  );
+        {/* Mission, Values, Video and Stats Section */}
+        <section id="sobre">
+          <MissionValuesSection />
+        </section>
+
+        {/* Benefits Section - 6 cards with badges */}
+        <BenefitsSection />
+
+        {/* Partnership Levels - Staggered 3-tier cards */}
+        <PartnershipLevels />
+
+        {/* Journey Section - Timeline with scroll progress */}
+        <JourneySection />
+
+        {/* Courses Section - Technical courses by category */}
+        <CoursesSection />
+
+        {/* EJA Section - Adult education courses */}
+        <EjaSection />
+
+        {/* Form Section - Form */}
+        <FormSection />
+
+        {/* FAQ Section - Frequently asked questions */}
+        <FaqSection />
+      </main>
+
+      <Footer />
+      <FloatingButtons />
+    </>
+  )
 }
